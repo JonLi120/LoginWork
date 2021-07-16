@@ -6,6 +6,7 @@ import android.view.inputmethod.InputMethodManager
 import androidx.core.os.bundleOf
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
+import androidx.fragment.app.replace
 import com.messon.noodoe.work.R
 import com.messon.noodoe.work.databinding.ActivityMainBinding
 import com.messon.noodoe.work.module.ExtraKey.EXTRA_MAIL
@@ -25,7 +26,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
     private fun addLoginFragment() {
         hideKeyboard()
         supportFragmentManager.commit {
-            add<LoginFragment>(R.id.container)
+            replace<LoginFragment>(R.id.container)
         }
     }
 
